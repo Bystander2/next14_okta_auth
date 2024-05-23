@@ -1,15 +1,16 @@
-import { signIn, signOut, useSession } from 'next-auth/client'
+import { signIn, signOut, useSession } from 'next-auth/react'
 
 export default function Header() {
 
-  const [session, loading] = useSession();
+  // const [session, loading] = useSession();
+  const { data: session, status } = useSession()
 
   let button;
 
   if (session) {
-    button = <button className="btn btn-secondary" onClick={signOut}>Logout</button>;
+    button = <button className="btn btn-secondary" onClick={()=>signOut()}>Logout</button>;
   } else {
-    button = <button className="btn btn-primary" onClick={signIn}>Login</button>;
+    button = <button className="btn btn-primary" onClick={()=>signIn()}>Login</button>;
   }
 
   return (

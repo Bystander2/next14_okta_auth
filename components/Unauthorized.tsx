@@ -1,4 +1,4 @@
-import { signIn } from 'next-auth/client'
+import { signIn } from 'next-auth/react'
 
 export default function Unauthorized() {
 
@@ -9,7 +9,7 @@ export default function Unauthorized() {
 
         <p>Please sign in here.</p>
 
-        <p><button className="btn btn-secondary" onClick={signIn}>Sign in</button></p>
+        <p><button className="btn btn-secondary" onClick={()=>signIn()}>Sign in</button></p>
       </div>
     </div>
   )

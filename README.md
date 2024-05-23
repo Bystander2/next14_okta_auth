@@ -1,51 +1,28 @@
-# Build a Next.js Application with TypeScript
+This is a nextJs and Okta demo<br/>
 
-This is the companion code for [this blog post](https://developer.okta.com/blog/2020/11/13/nextjs-typescript).
+1.Register an account on website: https://developer.okta.com/login/ (Need work email).Instead, we can download "okta for windows"(https://github.com/okta/okta-cli/releases) to resiger an account with personal email<br/>
+1.1 If we use "okta for windows", unzip the downloaded zip file and put okta.exe into a folder, then enter the folder using cmd:<br/>
+okta register
+2.Login the website: https://developer.okta.com/login/, then click "Applications"->"Applications" to create app integration, choose "oidc" and "Web Application" to generate a react app. Note down the client id and domain.<br/>
 
-## Getting Started
+Set up the settings:
+Sign-in redirect URIs: http://localhost:3000/api/auth/callback/okta Sign-out redirect URIs: http://localhost:3000/api/auth/signout(Need to check later) Grant type: "Authorization Code" and "Refersh Token" Assignments->Controlled access: Allow everyone in your organization to access
 
-Clone the repository:
+3.Add one person on the Directory->people<br/>
 
-```sh
-git clone https://github.com/oktadev/okta-nextjs-typescript-example.git
-cd okta-nextjs-typescript-example
-```
 
-Get all the dependencies:
+4.Open the app using vscode
+4.1 Modify OKTA_CLIENTID,OKTA_CLIENTSECRET, OKTA_ISSUER, and NEXTAUTH_URL in the .env.local file<br/>
+OKTA_CLIENTID=""##Get this from the app we created in step 2.<br/>
+OKTA_CLIENTSECRET=""##Get this from the app we created in step 2.<br/>
+OKTA_ISSUER="https://dev-85274789.okta.com/oauth2/default"<br/>
+NEXTAUTH_URL=http://localhost:3000<br/>
 
-```sh
-npm install
-```
+5.Use "yarn install" to install dependencies<br/>.
 
-Install the [Okta CLI](https://cli.okta.com) and run `okta apps create`. Use `Next.js` for the app name, choose **Web**, and press **Enter**.
+6.Use yarn dev to run the app<br/>
 
-Use `http://localhost:3000/api/auth/callback/okta` for the Redirect URI and accept the default Logout Redirect URI of `http://localhost:3000`.
+7.Click the login button and forward to "okta" sign in page, then input the user name and password that created on step 4<br/>.
+8.Check the localstorage to see the idtoken<br/>.
 
-Your issuer, client ID, and client secret will be stored in an `.okta.env` file in your current directory.
 
-Create a `.env.local` in the root directory and copy the values from `.okta.env` into it.
-
-```JSON
-OKTA_CLIENTID={yourClientId}
-OKTA_CLIENTSECRET={yourClientSecret}
-OKTA_DOMAIN={yourOktaIssuer}
-NEXTAUTH_URL=http://localhost:3000
-```
-
-**NOTE**: The `{yourOktaIssuer}` value should not have an `https://` prefix. For example, `dev-133337.okta.com/oauth2/default`.
-
-Run the application:
-
-```sh
-npm run dev
-```
-
-## Getting Help
-
-You can post questions about this blog post in the comments.
-
-If you have more generic questions about Okta, you can post them in the [DevForum](https://devforum.okta.com/)
-
-## License
-
-[Apache 2.0](LICENSE)

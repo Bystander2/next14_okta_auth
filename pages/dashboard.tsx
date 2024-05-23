@@ -7,11 +7,11 @@ import Header from '../components/Header'
 import Unauthorized from '../components/Unauthorized'
 import Movies from '../components/Movies'
 
-import { useSession } from 'next-auth/client'
+import { useSession } from 'next-auth/react'
 
 export default function Dashboard() {
 
-  const [session, loading] = useSession();
+  const {data:session} = useSession();
 
   var content = session ? <Movies></Movies> : <Unauthorized></Unauthorized>
 
