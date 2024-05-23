@@ -19,7 +19,7 @@ NEXTAUTH_URL=http://localhost:3000<br/>
 
 5.Use "yarn install" to install dependencies<br/>
 6.Use yarn dev to run the app<br/>
-7.Click the login button and forward to "okta" sign in page, then input the user name and password that created on step 4<br/>.
+7.Click the login button and forward to "okta" sign in page, then input the user name and password that created on step 3<br/>.
 
 
 
