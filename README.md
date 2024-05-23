@@ -10,19 +10,16 @@ Sign-in redirect URIs: http://localhost:3000/api/auth/callback/okta Sign-out red
 
 3.Add one person on the Directory->people<br/>
 
-
-4.Open the app using vscode
+4.Open the app using vscode<br/>
 4.1 Modify OKTA_CLIENTID,OKTA_CLIENTSECRET, OKTA_ISSUER, and NEXTAUTH_URL in the .env.local file<br/>
 OKTA_CLIENTID=""##Get this from the app we created in step 2.<br/>
 OKTA_CLIENTSECRET=""##Get this from the app we created in step 2.<br/>
 OKTA_ISSUER="https://dev-85274789.okta.com/oauth2/default"<br/>
 NEXTAUTH_URL=http://localhost:3000<br/>
 
-5.Use "yarn install" to install dependencies<br/>.
-
+5.Use "yarn install" to install dependencies<br/>
 6.Use yarn dev to run the app<br/>
-
 7.Click the login button and forward to "okta" sign in page, then input the user name and password that created on step 4<br/>.
-8.Check the localstorage to see the idtoken<br/>.
+
 
 
