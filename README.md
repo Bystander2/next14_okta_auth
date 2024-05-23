@@ -39,5 +39,41 @@ NEXTAUTH_URL=http://localhost:3000<br/>
 
 
 
+Second: Google calendar apis<br/>
+1. Open https://console.cloud.google.com/<br/>
+2. Create a new project called googlecalendar(any name)<br/>
+3. "APIs & Services" > "Library", search "Google Calendar API" and enable it.<br/>
+4. "APIs & Services" > "Credentials"->CREATE CREDENTIALS, choose "OAuth Client Id"<br/>
+    Application Type: Web Application<br/>
+    Name: Web client1 (any name)<br/>
+    Authorized JavaScript origins:<br/>
+    http://localhost:3000<br/>
+    Authorized redirect URIs<br/>
+    http://localhost:3000/api/auth/callback/google<br/>
 
+    Note: Save the credentials and note the Client ID and Client Secret.
+
+5. "OAuth consent screen"->Publishing status<br/>
+    Testing <br/> This status indicates the current app is in testing phase and only allows 100 users. 
+    5.1 if we want to publish app, we need to meet the below requirements<br/>
+    Push to production?<br/>
+    Your app will be available to any user with a Google Account.<br/>
+
+    You've configured your app in a way that requires verification . To complete verification, you will need to provide:<br/>
+
+    An official link to your app's Privacy Policy<br/>
+    A YouTube video showing how you plan to use the Google user data you get from scopes<br/>
+    A written explanation telling Google why you need access to sensitive and/or restricted user data<br/>
+    All your domains verified in Google Search Console<br/>
+
+6. "OAuth consent screen"-> ADD USERS, add test users. 
+    Note: Since the app is in testing status, only the users added here can test in client app. If the app is published, all the users that has a google account can have access to the app.
+
+ 7. Add GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET in the .env.local file
+ 8. Check the googlecalendar.tsx and calendar.ts for details.
+ 9. Test: 
+    9.1 http://localhost:3000/googlecalendar and click "Sign in with Google".
+    9.2 Enter the created email in step 6 above (choose the email if logged in before), 
+    9.3 If no errors happens, visit http://localhost:3000/googlecalendar again. The page will display all the events in the google calendar. 
+    9.4 Try to add new events in the google calendar associated with the email. New events will be displayed immediately.
 
