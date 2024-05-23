@@ -1,3 +1,7 @@
+Special thanks to the below two contributors:<br/>
+leebrandt: https://github.com/oktadev/okta-nextjs-typescript-example<br/> 
+nickolasfisher: https://github.com/nickolasfisher/Okta_NextJs<br/>
+
 This is a nextJs and Okta demo<br/>
 
 1.Register an account on website: https://developer.okta.com/login/ (Need work email).Instead, we can download "okta for windows"(https://github.com/okta/okta-cli/releases) to resiger an account with personal email<br/>
