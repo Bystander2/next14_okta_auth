@@ -3,6 +3,10 @@ Special thanks to the below two contributors:<br/>
 leebrandt: https://github.com/oktadev/okta-nextjs-typescript-example<br/> 
 nickolasfisher: https://github.com/nickolasfisher/Okta_NextJs<br/>
 
+Note: 
+Sign in with Okta(used to sso login)
+Sign in with Google(used to get calendar events from google apis)
+
 
 This is a nextJs and Okta demo. Please check the Next_Okta_20240523.docx for details<br/>
 
@@ -32,6 +36,8 @@ NEXTAUTH_URL=http://localhost:3000<br/>
 6.Use yarn dev to run the app<br/>
 
 7.Click the login button and forward to "okta" sign in page, then input the user name and password that created on step 3<br/>.
+
+
 
 
 

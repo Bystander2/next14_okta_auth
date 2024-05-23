@@ -1,5 +1,6 @@
 import NextAuth from 'next-auth'
 import OktaProvider from 'next-auth/providers/okta'
+import GoogleProvider from 'next-auth/providers/google';
 
 const options = {
   // Configure one or more authentication providers
@@ -9,7 +10,15 @@ const options = {
       clientSecret: process.env.OKTA_CLIENTSECRET,
       issuer: process.env.OKTA_ISSUER
     }),
-    // ...add more providers here
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      authorization: {
+        params: {
+          scope: 'openid https://www.googleapis.com/auth/calendar.readonly'
+        }
+      }
+    })
   ],
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) {
