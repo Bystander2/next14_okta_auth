@@ -13,14 +13,18 @@ const options = {
   ],
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) {
+      // console.log("user",user);
+      // console.log("account",account);
+      // console.log("profile",profile);
+      // console.log("email",email);
+      // console.log("credentials",credentials);
       return true;
     },
     async redirect({ url, baseUrl }) {
+      // console.log("url",url,"baseUrl",baseUrl)//url http://localhost:3000 baseUrl http://localhost:3000
       return baseUrl;
     },
-    // async session({ session, user, token }) {
-    //   return session;
-    // },
+    
     async jwt({ token, account }) {
       // Persist the OAuth access_token to the token right after signin
       if (account) {
