@@ -66,14 +66,14 @@ Second: Google calendar apis<br/>
     A written explanation telling Google why you need access to sensitive and/or restricted user data<br/>
     All your domains verified in Google Search Console<br/>
 
-6. "OAuth consent screen"-> ADD USERS, add test users. 
-    Note: Since the app is in testing status, only the users added here can test in client app. If the app is published, all the users that has a google account can have access to the app.
+6. "OAuth consent screen"-> ADD USERS, add test users. <br/>
+    Note: Since the app is in testing status, only the users added here can test in client app. If the app is published, all the users that has a google account can have access to the app.<br/>
 
- 7. Add GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET in the .env.local file
- 8. Check the googlecalendar.tsx and calendar.ts for details.
- 9. Test: 
-    9.1 http://localhost:3000/googlecalendar and click "Sign in with Google".
-    9.2 Enter the created email in step 6 above (choose the email if logged in before), 
-    9.3 If no errors happens, visit http://localhost:3000/googlecalendar again. The page will display all the events in the google calendar. 
-    9.4 Try to add new events in the google calendar associated with the email. New events will be displayed immediately.
+ 7. Add GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET in the .env.local file<br/>
+ 8. Check the googlecalendar.tsx and calendar.ts for details.<br/>
+ 9. Test: <br/>
+    9.1 http://localhost:3000/googlecalendar and click "Sign in with Google".<br/>
+    9.2 Enter the created email in step 6 above (choose the email if logged in before), <br/>
+    9.3 If no errors happens, visit http://localhost:3000/googlecalendar again. The page will display all the events in the google calendar. <br/>
+    9.4 Try to add new events in the google calendar associated with the email. New events will be displayed immediately.<br/>
 
