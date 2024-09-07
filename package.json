@@ -1,9 +1,9 @@
 {
-  "name": "movies",
+  "name": "next14_okta_auth",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 8080",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -12,10 +12,8 @@
     "@types/node": "^20.12.12",
     "@types/react": "^18.3.2",
     "bootstrap": "^5.3.3",
-    "googleapis": "^137.1.0",
-    "net": "^1.0.2",
     "next": "^14.2.3",
-    "next-auth": "^4.24.7",
+    "next-auth": "^5.0.0-beta.20",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "typescript": "^5.4.5"
