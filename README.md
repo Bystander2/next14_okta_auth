@@ -9,7 +9,7 @@ If you want to use nextjs(use app) and next-auth5, then please go ahead.I am new
 2.Login the website: https://developer.okta.com/login/, then click "Applications"->"Applications" to create app integration, choose "oidc" and "Web Application" to generate a react app. Note down the client id and domain.<br/>
 
 Set up the settings:
-Sign-in redirect URIs: http://localhost:3000/api/auth/callback/okta Sign-out redirect URIs: http://localhost:3000/api/auth/signout(Need to check later) Grant type: "Authorization Code" and "Refersh Token" Assignments->Controlled access: Allow everyone in your organization to access
+Sign-in redirect URIs: http://localhost:8080/api/auth/callback/okta Sign-out redirect URIs: http://localhost:8080/api/auth/signout(Need to check later) Grant type: "Authorization Code" and "Refersh Token" Assignments->Controlled access: Allow everyone in your organization to access
 
 3.Add one person on the Directory->people<br/>
 
