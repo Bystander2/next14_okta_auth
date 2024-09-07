@@ -1,7 +1,8 @@
-Note: <br/>
-Sign in with Okta(used to sso login)<br/>
+All code is base on https://github.com/guardiangel/okta-nextjs-typescript-example.So thanks for authors.
 
-This is a nextJs14, Okta and next-auth demo.
+If you want to use nextjs(use pages) and next-auth4, you can refer to https://github.com/guardiangel/okta-nextjs-typescript-example.
+
+If you want to use nextjs(use app) and next-auth5, then please go ahead.I am new to nextjs and ts, and this is a demo about auth in okta in nextjs.
 
 1.Register an account on website: https://developer.okta.com/login/ (Need work email).Instead, we can download "okta for windows"(https://github.com/okta/okta-cli/releases) to resiger an account with personal email.<br/>
 
